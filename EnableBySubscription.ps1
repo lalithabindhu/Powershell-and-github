@@ -1,23 +1,3 @@
-<#
-.SYNOPSIS
-    Register provided subscriptions with Automatic Registraion feature. Failed registration information will be stored in RegistrationErrors.csv
-    file in the current directory where this script is executed. RegistrationErrors.csv will be empty when there are no errors in subscription registration.
-.DESCRIPTION
-    Registering each subscription is a two step process:
-        -Register subscription to Microsoft.SqlVirtualMachine Resource provider.
-        -Register subscription to the Automatic Registraion feature.
-    By default (no subscriptions are specified), all subscription in the account will be registered.
-    Prerequisites:
-    - The user account running the script should have "Microsoft.SqlVirtualMachine/register/action" RBAC access over the subscriptions.
-    - The user account running the script should have "Microsoft.Features/providers/features/register/action" RBAC access over the subscriptions.
-
-.EXAMPLE
-    To register list of Subscriptions
-    .\EnableBySubscription.ps1 -SubscriptionList SubscriptionId1,SubscriptionId2
-    To register all subscriptions the user account has access to
-    .\EnableBySubscription.ps1
-
-#>
 Param
 (
     [Parameter(Mandatory = $false)]
