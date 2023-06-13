@@ -52,7 +52,8 @@ else {
     # Since AzureRm module is not availavle, we will use Az module.
     Write-Host "Installing Az powershell module if not installed already."
   # Install-Module -Name Az -AllowClobber -Scope CurrentUser;
-    Install-Module -Name Az -AllowClobber -Verbose -AcceptLicense -Force -Repository PSGallery;
+  # Install-Module -Name Az -AllowClobber -Verbose -AcceptLicense -Force -Repository PSGallery;
+    Install-Module -Name Az -AllowClobber -Scope CurrentUser -Repository PSGallery -Force;
   # Set-PSRepository -Name PSGallery -SourceLocation https://www.powershellgallery.com/api/v2/ -InstallationPolicy Trusted;
 
     Write-Host "Please login to your account which have access to the listed subscriptions";
