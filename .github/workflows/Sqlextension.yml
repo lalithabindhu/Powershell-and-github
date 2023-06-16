@@ -27,8 +27,8 @@ jobs:
          # azcliversion: 2.0.72
           #inlineScript: |
           #  az account list
-      - name: Checkout
-        uses: actions/checkout@v3
+      #- name: Checkout
+      - uses: actions/checkout@v3
       - name: Runnig poweshell script
         shell: pwsh
         run: ./EnableBySubscription.ps1 -SubscriptionList f6e79ccd-3633-4139-ae22-9e5b809085d6
