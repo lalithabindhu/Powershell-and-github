@@ -30,4 +30,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - run: ./EnableBySubscription.ps1 -SubscriptionList f6e79ccd-3633-4139-ae22-9e5b809085d6
-        shell: pwsh
+        #shell: pwsh
